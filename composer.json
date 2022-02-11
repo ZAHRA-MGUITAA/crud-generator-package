@@ -1,5 +1,5 @@
 {
-    "name": "generator/crud",
+    "name": "zahra-mguitaa/crud",
     "description": "this package will generate laravel crud with routes, migration  and validation  via interface",
     "type": "library",
     "license": "MIT",
