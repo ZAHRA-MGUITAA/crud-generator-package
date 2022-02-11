@@ -1,0 +1,25 @@
+{
+    "name": "crud/generator",
+    "description": "this package will generate laravel crud with routes, migration  and validation  via interface",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Crud\\Generator\\": "src/"
+        }
+    },
+    "authors": [{
+        "name": "ZAHRA-MGUITAA",
+        "email": "zahra.mguitaa22@gmail.com"
+    }],
+    "minimum-stability": "dev",
+    "require": {},
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Crud\\Generator\\GeneratorServiceProvider"
+            ]
+
+        }
+    }
+}
