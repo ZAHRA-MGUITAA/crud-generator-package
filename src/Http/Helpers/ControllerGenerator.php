@@ -91,7 +91,7 @@ class ControllerGenerator
             }
             if ($method == 'delete') {
                 $controller .= '  public function delete($id){
-                ' . $this->model . '::where($id)->delete();
+                ' . $this->model . '::find($id)->delete();
                 return redirect()->route(\'' . $this->group_name . '.index\');
             }
             ';

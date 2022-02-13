@@ -98,7 +98,7 @@ class GeneratorController extends Controller
                 'driver' => 'local',
                 'root' => base_path('database/migrations'),
             ]);
-            $disk->put(date('Y_m_d_His').'_create'.$request->table_name."_table.php", $content_migration);
+            $disk->put(date('Y_m_d_His').'_create_'.$request->table_name."_table.php", $content_migration);
 
 
             // $migration_file = new FileGenerator($request->table_name . "-migration", $mig);
@@ -134,7 +134,7 @@ class GeneratorController extends Controller
 
             $disk = Storage::build([
                 'driver' => 'local',
-                'root' => base_path('resources/views/'.$request->model_name),
+                'root' => base_path('resources/views/'.$request->group_name),
             ]);
             $disk->put("create.blade.php", $content_create);
             // $create_file = new FileGenerator("create", $create);
@@ -146,7 +146,7 @@ class GeneratorController extends Controller
 
             $disk = Storage::build([
                 'driver' => 'local',
-                'root' => base_path('resources/views/'.$request->model_name),
+                'root' => base_path('resources/views/'.$request->group_name),
             ]);
             $disk->put("edit.blade.php", $content_edit);
             // $edit_file = new FileGenerator("edit", $edit);
@@ -160,7 +160,7 @@ class GeneratorController extends Controller
             $content_index = $views->generateIndex();
             $disk = Storage::build([
                 'driver' => 'local',
-                'root' => base_path('resources/views/'.$request->model_name),
+                'root' => base_path('resources/views/'.$request->group_name),
             ]);
             $disk->put("index.blade.php", $content_index);
             // $index_file = new FileGenerator("index", $index);

@@ -135,20 +135,20 @@ class ViewGenerator
         ';
 
         $index .= '
-        @foreach($' . $this->model.'s as $' . $this->model . ')
+        @foreach($' . lcfirst($this->model).'s as $' . lcfirst($this->model) . ')
             <tr>
         ';
         foreach ($this->fields as $key => $field) {
             if ($this->inindex[$key] == 'on') {
                 $index .= '
-                <td>{{$' . $this->model . '->' . $field . '}}</td>
+                <td>{{$' . lcfirst($this->model) . '->' . $field . '}}</td>
         ';
             }
         }
         $index .= '
-            <td> <td><button type="button" class="btn btn-success"> <a href="{{ route(\'' . $this->group_name . '.edit\',[\'id\' => $' . $this->model . '->id]) }}">Edit</a> </button></td> </td>
+            <td> <td><button type="button" class="btn btn-success"> <a href="{{ route(\'' . $this->group_name . '.edit\',[\'id\' => $' . lcfirst($this->model) . '->id]) }}">Edit</a> </button></td> </td>
         <td>
-        <form id="delete-form" method="POST" action="{{ route(\'' . $this->group_name . '.delete\',[\'id\' => $' . $this->model . '->id]) }}">
+        <form id="delete-form" method="POST" action="{{ route(\'' . $this->group_name . '.delete\',[\'id\' => $' . lcfirst($this->model) . '->id]) }}">
             {{ csrf_field() }}
             {{ method_field(\'DELETE\') }}
     
