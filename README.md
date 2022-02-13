@@ -16,4 +16,11 @@ composer require takiddine-team/crud
 php artisan vendor:publish --tag=public --force
 ```
 
+### 3. generate your crud
+
+* go to the /crud route in your laravel url
+* fill in the form 
+* go to the web.php and import your controller
+
+
 

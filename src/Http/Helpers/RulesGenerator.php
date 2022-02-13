@@ -23,8 +23,7 @@ class RulesGenerator
 
     function generateRequest()
     {
-        $request = '
-<?php
+        $request = '<?php
 namespace App\Http\Requests;
 use Illuminate\Foundation\Http\FormRequest;
 class ' . $this->model . 'StoreRequest extends FormRequest
@@ -53,8 +52,7 @@ class ' . $this->model . 'StoreRequest extends FormRequest
 
     function generateUpdateRequest()
     {
-        $request = '
-<?php
+        $request = '<?php
 namespace App\Http\Requests;
 use Illuminate\Foundation\Http\FormRequest;
 class ' . $this->model . 'UpdateRequest extends FormRequest

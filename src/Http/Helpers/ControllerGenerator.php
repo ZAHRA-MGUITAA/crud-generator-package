@@ -48,7 +48,7 @@ class ControllerGenerator
              ';
             }
             if ($method == 'store') {
-                $controller .= ' public function store(Request $request){
+                $controller .= ' public function store('.$this->model .'StoreRequest $request){
                        ' . $this->model . '::create([';
                 foreach ($this->fields as $key => $field) {
                     if ($this->inform[$key] == 'on') {
@@ -72,7 +72,7 @@ class ControllerGenerator
             ';
             }
             if ($method == 'update') {
-                $controller .= 'public function update(Request $request,$id){
+                $controller .= 'public function update('.$this->model.'UpdateRequest $request,$id){
                 ' . $this->model . '::where(\'id\' , $id)->update([';
 
                 foreach ($this->fields as $key => $field) {
