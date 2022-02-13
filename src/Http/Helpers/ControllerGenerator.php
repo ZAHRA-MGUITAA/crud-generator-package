@@ -66,7 +66,7 @@ class ControllerGenerator
             }
             if ($method == 'edit') {
                 $controller .= 'public function edit($id){
-                     $' . $this->model . '=' . $this->model . '::where(\'id\',$id)->first();
+                     $' . strtolower($this->model) . '=' . $this->model . '::where(\'id\',$id)->first();
                      return view(\'' . $this->group_name . '.edit\',compact(\'' . strtolower($this->model) . '\'));
                 }
             ';

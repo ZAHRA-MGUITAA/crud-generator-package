@@ -4,3 +4,16 @@ crud-generator is a laravel crud generator, generate controller, model, migratio
 
 
 
+### 1. Install crud generator for laravel 
+
+```
+composer require takiddine-team/crud
+```
+
+### 2. publish package assets to the public folder
+
+```
+php artisan vendor:publish --tag=public --force
+```
+
+

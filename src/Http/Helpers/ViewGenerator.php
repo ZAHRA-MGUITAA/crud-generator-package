@@ -75,7 +75,7 @@ class ViewGenerator
         <body>
             <div class="container">
                 <h4>Add ' . $this->model . '</h4>
-                <form action="{{ route(\'' . $this->group_name . '.update\',[\'id\' => $' . $this->model . '->id]) }}" method="post">
+                <form action="{{ route(\'' . $this->group_name . '.update\',[\'id\' => $' . strtolower($this->model) . '->id]) }}" method="post">
                     @csrf
         ';
         foreach ($this->fields as $key => $field) {
