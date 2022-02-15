@@ -27,8 +27,8 @@ class ControllerGenerator
         $controller = '<?php
         namespace App\Http\Controllers;
         use Illuminate\Http\Request;
-        use App\Https\Requests\\'.$this->model .'StoreRequest;
-        use App\Https\Requests\\'.$this->model .'UpdateRequest;
+        use App\Http\Requests\\'.$this->model .'StoreRequest;
+        use App\Http\Requests\\'.$this->model .'UpdateRequest;
         use App\Models\\' . $this->model . ';
         class ' . $this->controller_name . ' extends Controller
         {
